@@ -116,7 +116,9 @@ class LinkCreator():
         try:
             soup = BeautifulSoup(content,'html.parser')
             for elem in soup.find_all('a',attrs= {"class":"card__title-link"}):
-                link_list.append(elem.get('href'))
+                if elem.get('href').find('new-real-estate-project-apartments') == -1:
+                    link_list.append(elem.get('href'))
+
         except Exception as e:
             print(e)
         if len(link_list) <= 30 :
