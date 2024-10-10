@@ -12,7 +12,7 @@ In this project, I create a scraper that builds a CSV file containing data for 1
 
 
 
-![immo_logo](https://assets.immoweb.be/221/images/logos/sharing-logo.png?v=2)
+![immo_logo]([https://assets.immoweb.be/221/images/logos/sharing-logo.png?v=2](https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f9/e5/3c/f9e53c99-f50b-3f13-b2b8-558d80c48783/AppIcon-0-0-1x_U007epad-0-0-0-85-220.png/1200x630wa.png))
 
 ## 📦 Repo structure
 
