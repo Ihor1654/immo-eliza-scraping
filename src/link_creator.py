@@ -11,6 +11,8 @@ class RunThread(threading.Thread):
     result
     :methods:
     run()
+    get_postcode_dict()
+    
     """
     def __init__(self, coro):
         self.coro = coro
@@ -26,7 +28,24 @@ class RunThread(threading.Thread):
 class LinkCreator():
     """
     Class that creates a dictionary with all postcodes of Belgium as keys and lists, which contain from 0 to 20 house links, as values.    
-    
+    :properties:
+    special_char_dict
+    headers
+    postcode_dict
+    link_dict
+    failed_links_list
+    final_postcode_dict
+    timeout
+    semaphore
+    :methods:
+    run_as()
+    get_postcode_dict()
+    get_link_dict()
+    get_houselinks_for_pcode()
+    if_link_is_goed()
+    check_all_links()
+    create_final_dict()
+    to_json_file()
     """
     def __init__(self) -> None:
         self.special_char_dict = { 
