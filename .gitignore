@@ -1,2 +1,6 @@
 venv/
 src/__pycache__/
+scraper/__pycache__/
+test.*
+test_*
+.DS_Store
