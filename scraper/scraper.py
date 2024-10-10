@@ -20,7 +20,7 @@ class Scraper():
 
     def __init__(self) -> None:
         self.headers = {"User-Agent":'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:130.0) Gecko/20100101 Firefox/130.0'}
-        self.json_path = '/Users/igorafanasIev/Desktop/becode_projects/immo-eliza-scraping/data/links/houselinks_for_postcode10441.json'
+        self.json_path = 'houselinks_for_postcode.json'
         self.timeout = httpx.Timeout(50.0)
         self.semaphore = asyncio.Semaphore(10)
         self.link_dict = {}
@@ -160,10 +160,13 @@ class Scraper():
             return None
 
     def clean_up_all_data(self):
-        for key,dicti in self.houses_raw_data_dict:
+        with open('data/raw_data_houses.json','r') as file:
+            goal_dict = json.load(file)
+        for key,dicti in goal_dict.items():
             cleand_dict = self.clean_up_house_data(dicti,key)
             if cleand_dict is not None:
                 self.houses_cleaned_data_list.append(cleand_dict)
+        return self.houses_cleaned_data_list
 
                 
              
