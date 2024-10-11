@@ -61,7 +61,7 @@ class Pipeline():
             Method that takes the path to the future file and saves cleaned data in CSV format.
             :params filepath: str path to the future file
         """
-        with open (filepath,'w',newline='') as file:
+        with open ('data/'+filepath,'w',newline='') as file:
             field_names = [key for key in self.dictionary_list_for_transfer[1].keys()]
             writer = csv.DictWriter(file,fieldnames=field_names,)
             self.dictionary_list_for_transfer.insert(0,{f'{key}': f"{key}" for key in field_names} )
