@@ -34,7 +34,7 @@ class Scraper():
 
     def __init__(self) -> None:
         self.headers = {"User-Agent":'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:130.0) Gecko/20100101 Firefox/130.0'}
-        self.json_path = 'houselinks_for_postcode.json'
+        self.json_path = 'data/links/houselinks_for_postcode.json'
         self.timeout = httpx.Timeout(50.0)
         self.semaphore = asyncio.Semaphore(10)
         self.link_dict = {}

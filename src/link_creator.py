@@ -99,7 +99,7 @@ class LinkCreator():
         :param: None
         :return: None
         """
-        with open('postal-codes.json','r') as file:
+        with open('data/postal-codes.json','r') as file:
             dictinary  = json.load(file)
             for i in dictinary:
                 if i['mun_name_nl']:
@@ -194,7 +194,7 @@ class LinkCreator():
         #print(res.count(True))
         #print(res.count(False))
     
-    def to_json_file(self, filepath : str = 'houselinks_for_postcode.json')-> None:
+    def to_json_file(self, filepath : str = 'data/links/houselinks_for_postcode.json')-> None:
         """
             Method creates json file with filepath name 
             :param: str filepath, the name of file; houselinks_for_postcode.json by default

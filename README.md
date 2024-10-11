@@ -22,6 +22,7 @@ In this project, I create a scraper that builds a CSV file containing data for 1
     ├──links/
         ├──houselinks_for_postcode.json
     ├──raw_data_houses.json
+    ├── houselinks_for_postcode.json
 ├──scraper
     ├──scraper.py
 ├── src/
@@ -29,7 +30,6 @@ In this project, I create a scraper that builds a CSV file containing data for 1
     ├──pipeline.py
 ├── .gitignore
 ├── main.py
-├── houselinks_for_postcode.json
 ├── maintest.csv
 ├── postal-codes.json
 └── README.md
@@ -65,4 +65,9 @@ print(finish)
 ## ⏱️ Timeline
 
 This project took tree days for completion.
+
+
+## Sources
+
+I used [Postal codes - Belgium](https://data.opendatasoft.com/explore/dataset/georef-belgium-postal-codes%40public/export/?location=7,50.51954,4.48177&basemap=jawg.streets) dataset from "Opendatasoft" web site.
 
